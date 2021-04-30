@@ -1,0 +1,27 @@
+# 应用名称
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url.defaultZone: "http://localhost:7001/eureka/"
+  instance:
+    appname: Eureka
+
+
+server:
+  port: 7001
+
+spring:
+  application:
+    name: Eureka-Server
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
